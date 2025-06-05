@@ -1,0 +1,59 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4026038, 2021-03-11T16:49:52-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: KontoraThin by NaumType
+ * URL: https://www.myfonts.com/fonts/naum-type/kontora/thin/
+ * 
+ * Webfont: KontoraLight by NaumType
+ * URL: https://www.myfonts.com/fonts/naum-type/kontora/light/
+ * 
+ * Webfont: Kontora-Regular by NaumType
+ * URL: https://www.myfonts.com/fonts/naum-type/kontora/regular/
+ * 
+ * Webfont: KontoraMedium by NaumType
+ * URL: https://www.myfonts.com/fonts/naum-type/kontora/medium/
+ * 
+ * Webfont: Kontora-SemiBold by NaumType
+ * URL: https://www.myfonts.com/fonts/naum-type/kontora/semibold/
+ * 
+ * Webfont: Kontora-Bold by NaumType
+ * URL: https://www.myfonts.com/fonts/naum-type/kontora/bold/
+ * 
+ * Webfont: KontoraExtraBold by NaumType
+ * URL: https://www.myfonts.com/fonts/naum-type/kontora/extrabold/
+ * 
+ * Webfont: KontoraBlack by NaumType
+ * URL: https://www.myfonts.com/fonts/naum-type/kontora/black/
+ * 
+ * Webfont: KontoraExtraBlack by NaumType
+ * URL: https://www.myfonts.com/fonts/naum-type/kontora/extrablack/
+ * 
+ * 
+ * Webfonts copyright: Copyright (c) 2018 by Petr Bushuev. All rights reserved.
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3d6eb6");
+  
+
+@font-face {
+  font-family: "Kontora-Medium";
+  src: url('webFonts/KontoraMedium/font.woff2') format('woff2'), url('webFonts/KontoraMedium/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Kontora-ExtraBold";
+  src: url('webFonts/KontoraExtraBold/font.woff2') format('woff2'), url('webFonts/KontoraExtraBold/font.woff') format('woff');
+}
+
+

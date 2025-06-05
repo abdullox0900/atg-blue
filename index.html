@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/public/favicon.png" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#004B89" />
+  <meta name="description" content="Доставка сжиженного газа" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ATG Gaz">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-push-webapp-id" content="web.com.yourcompany.atggaz">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/favicon.ico">
+  <link rel="apple-touch-icon"
+    href="https://firebasestorage.googleapis.com/v0/b/my-panel-17e33.appspot.com/o/%D0%93%D1%80%D1%83%D0%BF%D0%BF%D0%B0%2091%20(1).png?alt=media&token=c2ab08d1-eac1-4a6e-ae8e-c0c29c886abb">
+  <link rel="apple-touch-icon" sizes="152x152"
+    href="https://firebasestorage.googleapis.com/v0/b/my-panel-17e33.appspot.com/o/%D0%93%D1%80%D1%83%D0%BF%D0%BF%D0%B0%2091%20(1).png?alt=media&token=c2ab08d1-eac1-4a6e-ae8e-c0c29c886abb">
+  <link rel="apple-touch-icon" sizes="192x192" href="public/icons/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="public/icons/favicon-152x152.png">
+  <link rel="apple-touch-startup-image"
+    href="https://firebasestorage.googleapis.com/v0/b/my-panel-17e33.appspot.com/o/%D0%93%D1%80%D1%83%D0%BF%D0%BF%D0%B0%2091%20(1).png?alt=media&token=c2ab08d1-eac1-4a6e-ae8e-c0c29c886abb">
+  <!-- <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3)"
+    href="/splash/iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3)"
+    href="/splash/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)"
+    href="/splash/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    href="/splash/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png"> -->
+  <!-- <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+    href="/splash/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+    href="/splash/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+    href="/splash/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    href="/splash/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+    href="/splash/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png"> -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="onesignal" content="OneSignal-Website-SDK" />
+  <title>ATG Gaz</title>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/OneSignalSDKWorker.js')
+          .then(function (registration) {
+            console.log('ServiceWorker registration successful')
+          })
+          .catch(function (err) {
+            console.log('ServiceWorker registration failed: ', err)
+          })
+      })
+    }
+  </script>
+  <script>
+    function isDesktop() {
+      return window.innerWidth > 768
+    }
+
+    function redirectToDesktop() {
+      if (isDesktop()) {
+        window.location.href = '/desktop/index.html'  // Десктоп версияга йўналтириш
+      }
+    }
+
+    window.addEventListener('load', redirectToDesktop)
+
+    window.addEventListener('resize', redirectToDesktop);
+  </script>
+  <link rel="apple-touch-icon" href="/icons/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/favicon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/icons/favicon-152x152.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ATG Gaz">
+  <link rel="mask-icon" href="/icons/favicon-512x512.png" color="#004B89">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ATG Gaz">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+{
+	"name": "ATG Gaz - Доставка газа",
+	"short_name": "ATG Gaz",
+	"description": "Доставка сжиженного газа",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#ffffff",
+	"theme_color": "#004B89",
+	"categories": ["business", "utilities"],
+	"lang": "ru",
+	"dir": "ltr",
+	"prefer_related_applications": false,
+	"icons": [
+		{
+			"src": "public/icons/favicon-72x72.png",
+			"sizes": "72x72",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "public/icons/favicon-96x96.png",
+			"sizes": "96x96",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "public/icons/icon-128x128.png",
+			"sizes": "128x128",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "public/icons/favicon-144x144.png",
+			"sizes": "144x144",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "public/icons/favicon-152x152.png",
+			"sizes": "152x152",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "public/icons/favicon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "public/icons/favicon-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "public/icons/favicon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	],
+	"shortcuts": [
+		{
+			"name": "Заказать газ",
+			"url": "/order",
+			"icons": [
+				{
+					"src": "public/icons/favicon-96x96.png",
+					"sizes": "96x96",
+					"type": "image/png",
+					"purpose": "any maskable"
+				}
+			]
+		},
+		{
+			"name": "История заказов",
+			"url": "/history",
+			"icons": [
+				{
+					"src": "public/icons/favicon-96x96.png",
+					"sizes": "96x96",
+					"type": "image/png",
+					"purpose": "any maskable"
+				}
+			]
+		}
+	],
+	"gcm_sender_id": "482941778795",
+	"permissions": ["notifications", "push"],
+	"serviceworker": {
+		"src": "/OneSignalSDKWorker.js",
+		"scope": "/",
+		"use_cache": false
+	},
+	"apple_mobile_web_app_status_bar_style": "black-translucent",
+	"apple_mobile_web_app_title": "ATG Gaz",
+	"apple_mobile_web_app_capable": "yes"
+}

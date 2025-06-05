@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Jost", sans-serif;
+}
+
+/* Range input styles */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 13px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #004B89 0%, #A41A18 100%);
+    outline: none;
+}
+
+/* Range track styles */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 13px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #004B89 var(--range-progress), #EBEBEB var(--range-progress));
+}
+
+input[type="range"]::-moz-range-track {
+    height: 13px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #004B89 var(--range-progress), #EBEBEB var(--range-progress));
+}
+
+/* Range thumb styles */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+    margin-top: -11px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+}
+
+/* Active state */
+input[type="range"]:active::-webkit-slider-thumb {
+    background: #000000;
+    transform: scale(1.1);
+}
+
+input[type="range"]:active::-moz-range-thumb {
+    background: #000000;
+    transform: scale(1.1);
+}
+
+/* Custom select scrollbar */
+.custom-select-dropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.balance-bg {
+    background: url('./assets/balance-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
