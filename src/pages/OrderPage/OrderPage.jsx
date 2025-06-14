@@ -8,6 +8,7 @@ import { useOrder } from '../../hooks/useOrder'
 import { usePriceCards } from '../../hooks/usePriceCards'
 import useUserStore from '../../store/userStore'
 import { formatPrice } from '../../utils/formatters'
+
 export default function OrderPage() {
 	const navigate = useNavigate()
 	const location = useLocation()
@@ -539,9 +540,13 @@ export default function OrderPage() {
 					</div>
 
 					<div className='flex justify-between items-center'>
-						<span className='text-[20px]'>Скидка:</span>
+						<span className='text-[20px]'>
+							{useDiscount ? 'Использовано бонусов:' : 'Будет начислено:'}
+						</span>
 						<span className='text-[20px] font-bold'>
-							1% ({formatPrice(discountAmount)} рубля)
+							{useDiscount
+								? formatPrice(availableDiscountAmount) + ' руб.'
+								: formatPrice(discountAmount) + ' руб. (1%)'}
 						</span>
 					</div>
 

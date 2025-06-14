@@ -10,38 +10,14 @@ export default function OrderDetailsPage() {
 	const { orderDetails, isLoading, error } = useOrderDetails(orderId)
 
 	if (isLoading) {
-		return (
-			<div className='p-4'>
-				{/* <div className='bg-[#1e4b87] text-white py-4 px-8 rounded-full max-w-sm mx-auto mb-8'>
-					<p className='text-lg text-center'>ID № {userData?.id}</p>
-					<p className='text-lg text-center'>Баланс {userData?.balance} руб.</p>
-				</div>
-				<div className='text-center'>Загрузка...</div> */}
-			</div>
-		)
+		return <div className='p-4'></div>
+	}
+
+	if (error || !orderDetails) {
+		return <div className='p-4'></div>
 	}
 
 	console.log(orderDetails)
-
-	if (error || !orderDetails) {
-		return (
-			<div className='p-4'>
-				<div className='bg-[#1e4b87] text-white py-4 px-8 rounded-full max-w-sm mx-auto mb-8'>
-					<p className='text-lg text-center'>ID № {userData?.id}</p>
-					<p className='text-lg text-center'>Баланс {userData?.balance} руб.</p>
-				</div>
-				<div className='text-center text-red-500'>
-					{error?.message || 'Заказ не найден'}
-				</div>
-				<button
-					onClick={() => navigate('/history')}
-					className='mt-4 block mx-auto bg-[#1e4b87] text-white py-2 px-6 rounded-full'
-				>
-					Вернуться к истории заказов
-				</button>
-			</div>
-		)
-	}
 
 	const orderInfo = [
 		{
@@ -58,15 +34,18 @@ export default function OrderDetailsPage() {
 		},
 		{ label: 'Скидка', value: orderDetails.details['Скидка'] },
 		{
-			label: 'Сумма скидки',
+			label:
+				orderDetails.details['Скидка'] === 'да'
+					? 'Сумма скидки'
+					: 'Накопительный бонус (1%)',
 			value:
-				orderDetails.details['Скидка'] == 'да'
+				orderDetails.details['Скидка'] === 'да'
 					? formatPrice(
-							parseFloat(orderDetails.details['Сумма скидки']).toFixed(0)
+							parseFloat(orderDetails.details['Сумма скидки'] || 0).toFixed(0)
 					  )
 					: formatPrice(
 							parseFloat(
-								orderDetails.details['Накопительный бонус (1%)']
+								orderDetails.details['Накопительный бонус (1%)'] || 0
 							).toFixed(0)
 					  ),
 		},

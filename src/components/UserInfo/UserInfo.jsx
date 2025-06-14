@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
+import useUserStore from '../../store/userStore'
 import { formatPrice } from '../../utils/formatters'
 import BonusHistoryModal from '../BonusHistoryModal/BonusHistoryModal'
 
 export default function UserInfo() {
 	const { isAuthenticated, userData } = useAuth()
 	const [showBonusHistory, setShowBonusHistory] = useState(false)
+	const { user } = useUserStore()
 
 	const NotAuthenticatedView = () => (
 		<div className='text-center mt-[10px] mb-[25px] px-[16px]'>
@@ -54,7 +56,7 @@ export default function UserInfo() {
 						Баланс {formatPrice(parseFloat(userData?.balance).toFixed(0))} руб.
 					</p>
 					<div className='text-[20px] font-light leading-[20px] text-start'>
-						Адрес доставки: {userData?.address}
+						Адрес доставки: {user?.addresses[0]?.address}
 					</div>
 				</div>
 			</div>
